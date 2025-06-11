@@ -20,3 +20,25 @@ C:\Users\java\Desktop\TPF_WIW\obj\Debug\net6.0-windows\refint\WiW.dll
 C:\Users\java\Desktop\TPF_WIW\obj\Debug\net6.0-windows\WiW.pdb
 C:\Users\java\Desktop\TPF_WIW\obj\Debug\net6.0-windows\WiW.genruntimeconfig.cache
 C:\Users\java\Desktop\TPF_WIW\obj\Debug\net6.0-windows\ref\WiW.dll
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\bin\Debug\net6.0-windows\WiW.exe
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\bin\Debug\net6.0-windows\WiW.deps.json
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\bin\Debug\net6.0-windows\WiW.runtimeconfig.json
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\bin\Debug\net6.0-windows\WiW.dll
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\bin\Debug\net6.0-windows\WiW.pdb
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.Form1.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.Form2.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.Consultas.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.FormUser.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.Inicio.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.Properties.Resources.resources
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.csproj.GenerateResource.cache
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.AssemblyInfoInputs.cache
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.AssemblyInfo.cs
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.csproj.CoreCompileInputs.cache
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.sourcelink.json
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.dll
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\refint\WiW.dll
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.pdb
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\WiW.genruntimeconfig.cache
+C:\Users\angel\OneDrive\Documentos\Facultad\Materias\Compleijidad Temporal\TP final\TPF_WIW\obj\Debug\net6.0-windows\ref\WiW.dll

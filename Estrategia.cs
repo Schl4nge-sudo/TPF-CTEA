@@ -1,39 +1,123 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Microsoft.VisualBasic.Logging;
+using System.Security.Policy;
 using tp1;
 using tp2;
+using System.Text;
 
 namespace tpfinal
 {
 
-	class Estrategia
-	{
+    class Estrategia
+    {
 
-		public String Consulta1(ArbolBinario<DecisionData> arbol)
-		{
-			string resutl = "Implementar";
-			return resutl;
-		}
+        public ArbolBinario<DecisionData> CrearArbol(Clasificador clasificador)
+        {
+            // Caso base 
+            if (clasificador.crearHoja())
+            {
+                return new ArbolBinario<DecisionData>(new DecisionData(clasificador.obtenerDatoHoja()));
+            }
 
+            ArbolBinario<DecisionData> arbol = new ArbolBinario<DecisionData>(new DecisionData(clasificador.obtenerPregunta()));
+            arbol.agregarHijoIzquierdo(CrearArbol(clasificador.obtenerClasificadorIzquierdo()));
+            arbol.agregarHijoDerecho(CrearArbol(clasificador.obtenerClasificadorDerecho()));
 
-		public String Consulta2(ArbolBinario<DecisionData> arbol)
-		{
+            return arbol;
+        }
 
-			return "Implementar";
-		}
+        // Retorna un texto con todas las posibles predicciones que puede calcular el árbol de decisión del sistema.
+        public string Consulta1(ArbolBinario<DecisionData> arbol)
+        {
+            if (arbol == null) // Caso base, si el arbol es nulo (por ejemplo, si un hijo no existe), devuelve una cadena vacia
+            {
+                return "";
+            }
+            string resultado = "";
 
+            if (arbol.getHijoIzquierdo() != null)
+            {
+                resultado += Consulta1(arbol.getHijoIzquierdo());
+            }
 
-		public String Consulta3(ArbolBinario<DecisionData> arbol)
-		{
-			string result = "Implementar";
-			return result;
-		}
+            if (arbol.getHijoDerecho() != null)
+            {
+                resultado += Consulta1(arbol.getHijoDerecho());
+            }
 
-		public ArbolBinario<DecisionData> CrearArbol(Clasificador clasificador)
-		{
+            if (arbol.esHoja())
+            {
+                resultado += arbol.getDatoRaiz().ToString() + "\n";
+            }
 
-			return null;
-		}
-	}
+            return resultado;
+        }
+
+        // Retorna un texto que contiene todos los caminos hasta cada predicción
+        public string Consulta2(ArbolBinario<DecisionData> arbol)
+        {
+            int contador = 0;
+            return "Caminos:\n" + Recorrer(arbol, "", ref contador);
+        }
+
+        //Retorna un texto que contiene los datos almacenados en los nodos del árbol diferenciados por el nivel en que se encuentran.
+        public string Consulta3(ArbolBinario<DecisionData> arbol)
+        {
+            if (arbol == null) return "";
+
+            var sb = new StringBuilder();
+            var cola = new Queue<ArbolBinario<DecisionData>>();
+            cola.Enqueue(arbol);
+            int nivel = 0;
+
+            while (cola.Count > 0)
+            {
+                sb.AppendLine($"Nivel {nivel}:");
+                int contador = cola.Count;
+                for (int i = 0; i < contador; i++)
+                {
+                    var nodo = cola.Dequeue();
+                    sb.AppendLine(nodo.getDatoRaiz().ToString());
+                    if (nodo.getHijoIzquierdo() != null) cola.Enqueue(nodo.getHijoIzquierdo());
+                    if (nodo.getHijoDerecho() != null) cola.Enqueue(nodo.getHijoDerecho());
+                }
+                nivel++;
+                sb.AppendLine();
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // Construimos recursivamente cada ruta de decisión y la numeramos
+        private string Recorrer(ArbolBinario<DecisionData> nodo, string camino, ref int contador)
+        {
+            if (nodo == null)
+                return "";
+
+            if (nodo.esHoja())
+            {
+                contador++;
+                // ToString() en DecisionData imprimirá todas las predicciones con sus %
+                string textoPreds = nodo.getDatoRaiz().ToString();
+
+                return $"Opción N° {contador}: {camino}El personaje es: {textoPreds}\n";
+            }
+
+            string resultado = "";
+
+            if (nodo.getHijoIzquierdo() != null)
+            {
+                resultado += Recorrer(nodo.getHijoIzquierdo(), camino + $"{nodo.getDatoRaiz()} Sí >> ", ref contador);
+            }
+
+            if (nodo.getHijoDerecho() != null)
+            {
+                resultado += Recorrer(nodo.getHijoDerecho(), camino + $"{nodo.getDatoRaiz()} No >> ", ref contador);
+            }
+
+            return resultado;
+        }
+    }
 }
