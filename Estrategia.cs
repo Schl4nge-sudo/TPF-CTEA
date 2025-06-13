@@ -67,21 +67,23 @@ namespace tpfinal
         {
             if (arbol == null) return "";
 
+            // El uso de StringBuilder tiene como objetivo mejorar el rendimiento al concatenar muchas cadenas en un bucle. 
             var sb = new StringBuilder();
-            var cola = new Queue<ArbolBinario<DecisionData>>();
-            cola.Enqueue(arbol);
+            Cola<ArbolBinario<DecisionData>> cola = new Cola <ArbolBinario<DecisionData>>();
+            cola.encolar(arbol);
             int nivel = 0;
 
-            while (cola.Count > 0)
+            while (cola.cantidadElementos() > 0)
             {
                 sb.AppendLine($"Nivel {nivel}:");
-                int contador = cola.Count;
+                int contador = cola.cantidadElementos();
+
                 for (int i = 0; i < contador; i++)
                 {
-                    var nodo = cola.Dequeue();
+                    var nodo = cola.desencolar();
                     sb.AppendLine(nodo.getDatoRaiz().ToString());
-                    if (nodo.getHijoIzquierdo() != null) cola.Enqueue(nodo.getHijoIzquierdo());
-                    if (nodo.getHijoDerecho() != null) cola.Enqueue(nodo.getHijoDerecho());
+                    if (nodo.getHijoIzquierdo() != null) cola.encolar(nodo.getHijoIzquierdo());
+                    if (nodo.getHijoDerecho() != null) cola.encolar(nodo.getHijoDerecho());
                 }
                 nivel++;
                 sb.AppendLine();

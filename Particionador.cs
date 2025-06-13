@@ -21,7 +21,7 @@ namespace tpfinal
 			}
 			return counts;
 		}
-		
+		 
 		private static double gini(IList<IList<string>>  rows){
 			/* Calculate the Gini Impurity for a list of rows.
 		    There are a few different ways to do this, I thought this one was
