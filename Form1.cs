@@ -65,6 +65,8 @@ namespace WiW
             this.button7.Enabled = false;
             this.button8.Enabled = false;
 
+            // Se agrego este estilo para no permitirle al usuario que pueda escribir en el combobox generando errores
+            this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
         void picOneFaceUpA_Click(object sender, EventArgs e)

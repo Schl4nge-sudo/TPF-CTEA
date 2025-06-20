@@ -111,12 +111,12 @@ namespace tpfinal
 
             if (nodo.getHijoIzquierdo() != null)
             {
-                resultado += Recorrer(nodo.getHijoIzquierdo(), camino + $"{nodo.getDatoRaiz()} Sí >> ", ref contador);
+                resultado += Recorrer(nodo.getHijoIzquierdo(), camino + $"{nodo.getDatoRaiz()} >> ", ref contador);
             }
 
             if (nodo.getHijoDerecho() != null)
             {
-                resultado += Recorrer(nodo.getHijoDerecho(), camino + $"{nodo.getDatoRaiz()} No >> ", ref contador);
+                resultado += Recorrer(nodo.getHijoDerecho(), camino + $"{nodo.getDatoRaiz()} >> ", ref contador);
             }
 
             return resultado;
